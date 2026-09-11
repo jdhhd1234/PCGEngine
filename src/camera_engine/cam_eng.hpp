@@ -20,7 +20,7 @@ public:
     }
 
 private:
-    Camera3D camera{};
+    Camera3D camera;
 
     PositionCube positioncube;
 };
