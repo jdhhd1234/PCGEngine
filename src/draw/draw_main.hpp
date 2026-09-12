@@ -7,7 +7,9 @@ class DrawMainLoop
 public:
     void DrwMainLop();
 
-    void RandomDrawCube();
+    void GenerateCubes(int n);
+
+    void DrawCubes();
 
 private:
     std::vector<Vector3> cubes;
