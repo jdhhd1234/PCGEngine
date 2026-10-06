@@ -1,13 +1,12 @@
-#include "raylib.h"
-#include "basewin/baseWin.hpp"
-#include "draw/draw_main.hpp"
+#include "basic/basic_window.hpp"
+#include "basic/basic_loop.hpp"
 
 int main() 
 {
-    BasicWindow basicwindow(1000, 700, "RaylibTest");
+    BasicWindow basic_window(1270, 720);
 
-    DrawMainLoop drawMainLoop;
-    drawMainLoop.DrwMainLop();
-    
+    MainLoop mainLoop;
+    mainLoop.mainDraw();
+
     return 0;
 }

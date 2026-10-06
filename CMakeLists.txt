@@ -18,6 +18,7 @@ file(GLOB_RECURSE PCGENGINE_SOURCES CONFIGURE_DEPENDS
 
 add_executable(PCGEngine
     ${PCGENGINE_SOURCES}
+    src/basic/basic_loop.cpp
 )
 target_include_directories(PCGEngine PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/src"
