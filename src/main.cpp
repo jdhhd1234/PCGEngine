@@ -7,6 +7,6 @@ int main()
 
     MainLoop mainLoop;
     mainLoop.mainDraw();
-
+    
     return 0;
 }
