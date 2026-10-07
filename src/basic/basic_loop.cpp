@@ -2,6 +2,7 @@
 #include "system_3d/system3D.hpp"
 
 #include <raylib.h>
+#include <iostream>
 
 void MainLoop::mainDraw()
 {
@@ -10,6 +11,8 @@ void MainLoop::mainDraw()
     SetTargetFPS(60);
 
     // setting is here
+
+    // Camera3D
     Camera3D camsetting = basic3d.Basic3DCamSetting();
 
     // Main game loop
@@ -29,7 +32,7 @@ void MainLoop::mainDraw()
 
             basic3d.Draw3DStartEnd(camsetting);
 
-            DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+            std::cout << camsetting.position.x << camsetting.position.y << camsetting.position.z << std::endl;
 
         EndDrawing();
         //----------------------------------------------------------------------------------
