@@ -8,8 +8,6 @@ private:
     Texture2D texture;
 
 public:
-    ModelLoaderAuto(const char *fileName, const char *texture2d);
-    ~ModelLoaderAuto();
-
-    void LoadModel_Engine();
+    void InitalizeAsset(const char *fileName, const char *fileTexture);
+    void DrawAsset(Vector3 position, float scale, Color color);
 };

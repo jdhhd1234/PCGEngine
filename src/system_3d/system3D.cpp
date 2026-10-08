@@ -1,12 +1,15 @@
 #include "system_3d/system3D.hpp"
+#include "./PCG_System/assetLoader/asset_loader.hpp"
 
 #include <raylib.h>
 
-void Basic3D::Draw3DStartEnd(Camera3D camera)
+void Basic3D::Draw3DStartEnd(Camera3D camera, ModelLoaderAuto& loaderAuto)
 {
     BeginMode3D(camera);
 
         DrawGrid(1000, 10.0f);
+
+        loaderAuto.DrawAsset({0.0f, 0.0f, 0.0f}, 1.0f, WHITE);
 
     EndMode3D();
 }
