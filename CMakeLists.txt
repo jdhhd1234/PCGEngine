@@ -18,12 +18,13 @@ FetchContent_MakeAvailable(raylib)
 file(GLOB_RECURSE PCGENGINE_SOURCES CONFIGURE_DEPENDS
     "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/*.hpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.c"
 )
 
 add_executable(PCGEngine
     ${PCGENGINE_SOURCES}
     src/basic/basic_loop.cpp
-    lib/ufbx.h
     src/PCG_System/assetLoader/fbx_loader.cpp
     src/PCG_System/assetLoader/fbx_loader.hpp
 )
