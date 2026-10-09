@@ -10,4 +10,5 @@ private:
 public:
     void InitalizeAsset(const char *fileName, const char *fileTexture);
     void DrawAsset(Vector3 position, float scale, Color color);
+    void DisalbeAsset();
 };

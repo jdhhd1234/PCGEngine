@@ -14,7 +14,10 @@ void MainLoop::mainDraw()
     // setting is here
     ModelLoaderAuto loaderAuto;
 
-    loaderAuto.InitalizeAsset("../asset_test/asset_source/Ship_06_Open_Sails.obj","../asset_test/asset_source/T_Ship06_BarrelMetal_01_Diffuse.jpg");
+    loaderAuto.InitalizeAsset(
+        "C:/Users/kym10/Documents/VSCodeProj/PCGEngine/src/asset_test/castle.obj",
+        "C:/Users/kym10/Documents/VSCodeProj/PCGEngine/src/asset_test/castle_diffuse.png"
+    );
 
     // Camera3D
     Camera3D camsetting = basic3d.Basic3DCamSetting();
@@ -36,9 +39,11 @@ void MainLoop::mainDraw()
 
             basic3d.Draw3DStartEnd(camsetting, loaderAuto);
 
-            std::cout << camsetting.position.x << camsetting.position.y << camsetting.position.z << std::endl;
+            // [FOR DEBUG] std::cout << camsetting.position.x << camsetting.position.y << camsetting.position.z;
 
         EndDrawing();
         //----------------------------------------------------------------------------------
     }
+
+    loaderAuto.DisalbeAsset();
 }

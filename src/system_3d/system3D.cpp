@@ -6,10 +6,9 @@
 void Basic3D::Draw3DStartEnd(Camera3D camera, ModelLoaderAuto& loaderAuto)
 {
     BeginMode3D(camera);
-
-        DrawGrid(1000, 10.0f);
-
+    
         loaderAuto.DrawAsset({0.0f, 0.0f, 0.0f}, 1.0f, WHITE);
+        DrawGrid(1000, 10.0f);
 
     EndMode3D();
 }

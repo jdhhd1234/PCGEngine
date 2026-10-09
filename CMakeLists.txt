@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.11)
 project(PCGEngine VERSION 0.1.0 LANGUAGES C CXX)
 
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 include(FetchContent)
 
 FetchContent_Declare(
@@ -19,6 +23,9 @@ file(GLOB_RECURSE PCGENGINE_SOURCES CONFIGURE_DEPENDS
 add_executable(PCGEngine
     ${PCGENGINE_SOURCES}
     src/basic/basic_loop.cpp
+    lib/ufbx.h
+    src/PCG_System/assetLoader/fbx_loader.cpp
+    src/PCG_System/assetLoader/fbx_loader.hpp
 )
 target_include_directories(PCGEngine PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/src"

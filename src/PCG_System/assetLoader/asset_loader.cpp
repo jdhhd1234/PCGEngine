@@ -14,3 +14,9 @@ void ModelLoaderAuto::DrawAsset(Vector3 position, float scale, Color color)
 {
     DrawModel(model, position, scale, color);        // Draw 3d model with texture
 }
+
+void ModelLoaderAuto::DisalbeAsset()
+{
+    UnloadTexture(texture);
+    UnloadModel(model);
+}
