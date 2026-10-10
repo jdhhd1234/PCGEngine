@@ -1,6 +1,7 @@
 #include "basic/basic_loop.hpp"
 #include "system_3d/system3D.hpp"
 #include "PCG_System/assetLoader/asset_loader.hpp"
+#include "PCG_System/assetLoader/fbx_loader.hpp"
 
 #include <raylib.h>
 #include <iostream>
@@ -14,9 +15,15 @@ void MainLoop::mainDraw()
     // setting is here
     ModelLoaderAuto loaderAuto;
 
+    /*
     loaderAuto.InitalizeAsset(
         "C:/Users/kym10/Documents/VSCodeProj/PCGEngine/src/asset_test/castle.obj",
         "C:/Users/kym10/Documents/VSCodeProj/PCGEngine/src/asset_test/castle_diffuse.png"
+    );
+    */
+
+    FBXLoader fbx_loader(
+        "C:/Users/kym10/Documents/VSCodeProj/PCGEngine/src/asset_test/fbx_test/Fanal_Laurisilva_Tree_dtre_Raw/Fanal_Laurisilva_Tree_dtre_Raw.fbx"
     );
 
     // Camera3D
@@ -37,7 +44,7 @@ void MainLoop::mainDraw()
 
             ClearBackground(RAYWHITE);
 
-            basic3d.Draw3DStartEnd(camsetting, loaderAuto);
+            basic3d.Draw3DStartEnd(camsetting, loaderAuto, fbx_loader);
 
             // [FOR DEBUG] std::cout << camsetting.position.x << camsetting.position.y << camsetting.position.z;
 
@@ -45,5 +52,5 @@ void MainLoop::mainDraw()
         //----------------------------------------------------------------------------------
     }
 
-    loaderAuto.DisalbeAsset();
+    // loaderAuto.DisalbeAsset();
 }

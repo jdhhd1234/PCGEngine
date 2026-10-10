@@ -8,6 +8,8 @@ private:
     Texture2D texture;
 
 public:
+    // 나중에 Init랑 Disable도 RAII로 교체할꺼임.
+
     void InitalizeAsset(const char *fileName, const char *fileTexture);
     void DrawAsset(Vector3 position, float scale, Color color);
     void DisalbeAsset();

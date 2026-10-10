@@ -5,17 +5,10 @@
 
 int main() 
 {
-    //BasicWindow basic_window(1270, 720);
+    BasicWindow basic_window(1270, 720);
 
-    //MainLoop mainLoop;
-    //mainLoop.mainDraw();
-
-    FBXLoader fbx_loader;
-    fbx_loader.LoadFBX(
-        "C:/Users/kym10/Documents/VSCodeProj/PCGEngine/src/asset_test/fbx_test/Fanal_Laurisilva_Tree_dtre_Raw/Fanal_Laurisilva_Tree_dtre_Raw.fbx"
-    );
-
-    fbx_loader.UnloadFBX();
+    MainLoop mainLoop;
+    mainLoop.mainDraw();
     
     return 0;
 }
